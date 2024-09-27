@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/AppStart">
+
+    <fragment
+        android:id="@+id/AppStart"
+        android:name="de.tubs.cs.ias.vappp.AppStart"
+        android:label="App Start"
+        tools:layout="@layout/app_start">
+
+        <action
+            android:id="@+id/action_AppStart_to_CreateObject"
+            app:destination="@+id/CreateObject" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CreateObject"
+        android:name="de.tubs.cs.ias.vappp.CreateObject"
+        android:label="Create Object"
+        tools:layout="@layout/fragment_create_object">
+
+        <action
+            android:id="@+id/action_CreateObject_to_Consent"
+            app:destination="@id/Consent" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Consent"
+        android:name="de.tubs.cs.ias.vappp.Consent"
+        android:label="Create Object"
+        tools:layout="@layout/fragment_consent">
+
+        <action
+            android:id="@+id/action_Consent_to_Initialize"
+            app:destination="@id/Initialize" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Initialize"
+        android:name="de.tubs.cs.ias.vappp.Initialize"
+        android:label="Create Object"
+        tools:layout="@layout/fragment_initialize">
+
+        <action
+            android:id="@+id/action_Initialize_to_BasicFunc"
+            app:destination="@id/BasicFunc" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/BasicFunc"
+        android:name="de.tubs.cs.ias.vappp.BasicFunc"
+        android:label="Create Object"
+        tools:layout="@layout/fragment_basic_func">
+    </fragment>
+</navigation>

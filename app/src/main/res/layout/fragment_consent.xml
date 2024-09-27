@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Consent">
+
+    <TextView
+        android:id="@+id/textview_consent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You may (or not) consent"
+        app:layout_constraintBottom_toTopOf="@id/button_consent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_consent_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agree"
+        app:layout_constraintBottom_toTopOf="@id/button_consent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_consent_reject"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_consent" />
+
+    <Button
+        android:id="@+id/button_consent_reject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refuse"
+        app:layout_constraintBottom_toTopOf="@id/button_consent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_consent_agree"
+        app:layout_constraintTop_toBottomOf="@id/textview_consent" />
+
+    <Button
+        android:id="@+id/button_consent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Initialize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_consent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
